@@ -1,0 +1,7 @@
+packages: .
+flags: +gui +ekg -codespeed -llvm-cpu +llvm-ptx -smvm -crystal -tunnel -canny -mandelbrot -julia -fluid +nbody -smoothlife -hashcat -fft -pagerank -quicksort -ray -kmeans
+
+source-repository-package
+    type: git
+    location: https://github.com/jmatsushita/cuda.git
+    tag: 17502e6fd93f40e7d1c6596aa26a624bf986ae85

@@ -39,7 +39,7 @@ extra-source-files:
 flag gui
   description:          Enable gloss-based GUIs, where applicable. If not
                         enabled, the application always runs in benchmark mode.
-  default:              True
+  default:              False
 
 flag ekg
   description:          Enable EKG remote monitoring server at <http://localhost:8000>
@@ -53,7 +53,7 @@ flag codespeed
 --
 flag llvm-cpu
   description:          Enable the LLVM backend for multicore CPUs
-  default:              True
+  default:              False
 
 flag llvm-ptx
   description:          Enable the LLVM PTX backend for NVIDIA GPUs
@@ -63,31 +63,31 @@ flag llvm-ptx
 --
 flag smvm
   description:          Sparse-matrix vector multiplication benchmark
-  default:              True
+  default:              False
 
 flag crystal
   description:          A visualisation of a sum of waves in a plane
-  default:              True
+  default:              False
 
 flag tunnel
   description:          The slit-scan effect creating a Doctor Who time vortex
-  default:              True
+  default:              False
 
 flag canny
   description:          Canny edge detection benchmark
-  default:              True
+  default:              False
 
 flag mandelbrot
   description:          A Mandelbrot fractal benchmark
-  default:              True
+  default:              False
 
 flag julia
   description:          An interactive julia-set simulator
-  default:              True
+  default:              False
 
 flag fluid
   description:          An interactive particle-based fluid simulation
-  default:              True
+  default:              False
 
 flag nbody
   description:          Simulation of gravitational attraction between solid particles
@@ -95,31 +95,31 @@ flag nbody
 
 flag smoothlife
   description:          A cellular automata simulation
-  default:              True
+  default:              False
 
 flag hashcat
   description:          A "password recovery" application for MD5 cracking
-  default:              True
+  default:              False
 
 flag fft
   description:          Simple FFT-based high/low-pass image filtering
-  default:              True
+  default:              False
 
 flag pagerank
   description:          Implementation of the PageRank algorithm
-  default:              True
+  default:              False
 
 flag quicksort
   description:          Implementation of the QuickSort algorithm
-  default:              True
+  default:              False
 
 flag ray
   description:          A simple real-time ray tracer
-  default:              True
+  default:              False
 
 flag kmeans
   description:          An implementation of k-means clustering in a plane
-  default:              True
+  default:              False
 
 
 -- Test harness
@@ -486,7 +486,7 @@ executable accelerate-nbody
         Gloss.Event
         Gloss.Simulate
         Random.Position
-        Solver.BarnsHut
+        Solver.BarnesHut
         Solver.Naive1
         Solver.Naive2
         Test

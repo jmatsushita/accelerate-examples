@@ -3,5 +3,4 @@ dist/
 examples/canny/Process_stub.h
 *.swp
 .stack-work
-stack.yaml
 /stack.yaml.lock

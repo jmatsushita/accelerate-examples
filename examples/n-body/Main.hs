@@ -13,7 +13,7 @@ import Gloss.Simulate
 import Random.Position
 import qualified Solver.Naive1                          as Naive1
 import qualified Solver.Naive2                          as Naive2
-import qualified Solver.BarnsHut                        as BarnsHut
+import qualified Solver.BarnesHut                       as BarnesHut
 
 import Data.Array.Accelerate                            as A hiding ( size )
 import Data.Array.Accelerate.System.Random.MWC          as A
@@ -33,7 +33,7 @@ main
         let solver      = case get configSolver conf of
                             Naive1      -> Naive1.calcAccels
                             Naive2      -> Naive2.calcAccels
-                            BarnsHut    -> BarnsHut.calcAccels
+                            BarnesHut   -> BarnesHut.calcAccels
 
             n           = get configBodyCount conf
             size        = get configWindowSize conf
@@ -68,7 +68,7 @@ main
             step        = P.curry
                         $ run1 backend
                         $ A.uncurry
-                        $ advanceBodies (solver $ constant epsilon)
+                        $ advanceBodies (solver size $ constant epsilon)
 
 
         -- Forward unto dawn

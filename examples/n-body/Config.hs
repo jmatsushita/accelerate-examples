@@ -10,7 +10,7 @@ import Data.Label
 import System.Console.GetOpt
 
 
-data Solver = Naive1 | Naive2 | BarnsHut
+data Solver = Naive1 | Naive2 | BarnesHut
   deriving (Enum, Bounded, Show)
 
 
@@ -124,7 +124,7 @@ options =
     solver algorithm
       | a `elem` ["n1", "naive1"]                       = Naive1
       | a `elem` ["n2", "naive2"]                       = Naive2
-      | a `elem` ["bh", "barnshut", "barns-hut"]        = BarnsHut
+      | a `elem` ["bh", "barneshut", "barnes-hut"]      = BarnesHut
       | otherwise                                       = error $ "Unknown solver method: " ++ algorithm
       where
         a = map toLower algorithm
